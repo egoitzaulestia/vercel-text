@@ -9,11 +9,9 @@ app.use(express.static(path.join(__dirname, 'public'))); // Sirve archivos está
 
 app.get('/env', (req, res) => {
     res.json({ message: process.env.ENV_MESSAGE_TEST });
-});
-
-app.get('/env2', (req, res) => {
     res.json({ message: process.env.ENV_MESSAGE_TEST_2 });
 });
+
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');
